@@ -41,6 +41,7 @@ Files are at <https://github.com/danielnager/arxseq64>.
 
 An implementation can be found at:
 <https://github.com/danielnager/arxseq64/blob/main/arxseq64_512_out.c> 
+this implementation outputs a pseudo random stream.
 
 And a benchmarking tool at:
 <https://github.com/danielnager/arxseq64/blob/main/arxseq64_512_bm.c>
