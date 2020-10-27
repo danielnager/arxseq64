@@ -3657,4 +3657,133 @@ Generator state:
 
 
 
-*************************
+***********************************************************
+HOST = pc1, Linux
+
+stdinput
+
+
+sstring_AutoCor test:
+-----------------------------------------------
+   N = 10,  n = 1000000029,  r =  0,   s = 3,   d = 3
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :   0.062
+p-value of test                       :    0.89
+
+Kolmogorov-Smirnov- statistic = D-    :    0.30
+p-value of test                       :    0.14
+
+Anderson-Darling statistic = A2       :    1.06
+p-value of test                       :    0.32
+
+Tests on the sum of all N observations
+Standardized normal statistic         :    1.25
+p-value of test                       :    0.11
+
+Sample variance                       :    1.49
+p-value of test                       :    0.15
+
+-----------------------------------------------
+CPU time used                    :  00:01:57.63
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = pc1, Linux
+
+stdinput
+
+
+sstring_AutoCor test:
+-----------------------------------------------
+   N = 10,  n = 1000000030,  r = 27,   s = 3,   d = 1
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :    0.23
+p-value of test                       :    0.29
+
+Kolmogorov-Smirnov- statistic = D-    :   0.059
+p-value of test                       :    0.90
+
+Anderson-Darling statistic = A2       :    0.50
+p-value of test                       :    0.75
+
+Tests on the sum of all N observations
+Standardized normal statistic         :   -0.85
+p-value of test                       :    0.80
+
+Sample variance                       :    0.93
+p-value of test                       :    0.50
+
+-----------------------------------------------
+CPU time used                    :  00:02:05.22
+
+Generator state:
+
+
+
+
+***********************************************************
+HOST = pc1, Linux
+
+stdinput
+
+
+sstring_AutoCor test:
+-----------------------------------------------
+   N = 10,  n = 1000000029,  r = 27,   s = 3,   d = 3
+
+
+-----------------------------------------------
+
+Kolmogorov-Smirnov+ statistic = D+    :   0.088
+p-value of test                       :    0.81
+
+Kolmogorov-Smirnov- statistic = D-    :    0.27
+p-value of test                       :    0.19
+
+Anderson-Darling statistic = A2       :    0.81
+p-value of test                       :    0.47
+
+Tests on the sum of all N observations
+Standardized normal statistic         :    0.95
+p-value of test                       :    0.17
+
+Sample variance                       :    0.65
+p-value of test                       :    0.75
+
+-----------------------------------------------
+CPU time used                    :  00:01:58.50
+
+Generator state:
+
+
+
+
+
+========= Summary results of BigCrush =========
+
+ Version:          TestU01 1.2.3
+ Generator:        stdinput
+ Number of statistics:  160
+ Total CPU time:   05:02:16.11
+ The following tests gave p-values outside [0.001, 0.9990]:
+ (eps  means a value < 1.0e-300):
+ (eps1 means a value < 1.0e-15):
+
+       Test                          p-value
+ ----------------------------------------------
+ 27  SimpPoker, r = 27               0.9993 
+ ----------------------------------------------
+ All other tests were passed
+
+
+
