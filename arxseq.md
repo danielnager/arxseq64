@@ -23,7 +23,7 @@ and the whole mixing for 3 rounds is:
                 step(output+6, 16,47) // 16+0 40+7 // output[8]=output[0], output[9]=output[1]
             end for
 
-As all the steps and rounds can be reversed without ambiguity it's a permutation, so each initial state gives rise to a different output state, with the exception of the initial state filled with zeros, that must be avoided. This ensures that the period length of this generator is 2^512-1 blocks of 64 bytes, if we use the state as a counter starting from 1.
+As all the steps and rounds can be reversed without ambiguity it's a permutation, so each input state gives rise to a different output state, with the exception of the input state filled with zeros, that must be avoided. This ensures that the period length of this generator is 2^512-1 blocks of 64 bytes, if we use the input state as a counter starting from 1.
 
 The input state can be configured as desired. In my own tests first 64-bit word is an incremental counter, and second 64-bit word a sequence selector. The rest is filled with zeros.
 
