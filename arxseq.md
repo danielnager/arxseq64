@@ -4,24 +4,24 @@ Inside a buffer of 8 words, 64-bit in this case, a step transformation operates 
 
 The basic step is (p is the first position to mix, r1 and r2 are rotation distances):
 
-step(p,r1,r2) 
-    p[2] := p[2] xor p[0]
-    p[3] := p[3] xor p[1]
-    p[2] := p[2]  +  p[1]
-    p[3] := p[3]  +  p[0]
-    p[2] := rotate_left(p[2], r1)
-    p[3] := rotate_left(p[3], r2)
+        step(p,r1,r2) 
+            p[2] := p[2] xor p[0]
+            p[3] := p[3] xor p[1]
+            p[2] := p[2]  +  p[1]
+            p[3] := p[3]  +  p[0]
+            p[2] := rotate_left(p[2], r1)
+            p[3] := rotate_left(p[3], r2)
 
 and the whole mixing for 3 rounds is:
 
-process_input(output[8], input[8])
-    copy input into output
-    for 3 rounds
-        step(output+0, 22,41) // 16+6 40+1
-        step(output+2, 20,43) // 16+4 40+3
-        step(output+4, 18,45) // 16+2 40+5
-        step(output+6, 16,47) // 16+0 40+7 // output[8]=output[0], output[9]=output[1]
-    end for
+        process_input(output[8], input[8])
+            copy input into output
+            for 3 rounds
+                step(output+0, 22,41) // 16+6 40+1
+                step(output+2, 20,43) // 16+4 40+3
+                step(output+4, 18,45) // 16+2 40+5
+                step(output+6, 16,47) // 16+0 40+7 // output[8]=output[0], output[9]=output[1]
+            end for
 
 As all the steps and rounds can be reversed without ambiguity it's a permutation, so each initial state gives rise to a different output state, with the exception of the initial state filled with zeros, that must be avoided. This ensures, that the period length of this generator is 2^512-1 blocks of 64 bytes, if we use the state as a counter starting from 1.
 
