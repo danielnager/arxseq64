@@ -27,9 +27,9 @@ As all the steps and rounds can be reversed without ambiguity it's a permutation
 
 The input state can be configured as desired. In my own tests first 64-bit word is an incremental counter, and second 64-bit word a sequence selector. The rest is filled with zeros.
 
-Furthermore, if we take contiguous values sized as powers of two, from 1 to 512, over the entire period each value is equidistributed. This is proved by the fact that the mixing is a permutation.
+Furthermore, if we take contiguous values sized as powers of two, from 0 to 9, i.e. 1 to 512 bits, over the entire period each value is equidistributed. This is proved by the fact that the mixing is a permutation.
 
-In a x64 processor able to execute two machine instruction each cycle if ordered properly, the cost of step() is 3 cycles, for 3 rounds and 4 calls, leads to 36 cycles to generate 64 bytes, resulting in 0.56 cycles/byte. This is can be confirmed experimentally with little differences.
+In a x64 processor able to execute two machine instruction each cycle if ordered properly, the cost of step() is 3 cycles, for 3 rounds and 4 calls, leads to 36 cycles to generate 64 bytes, resulting in 0.56 cycles/byte. This can be confirmed experimentally with little differences.
 
 This generator passes TestU01's BigCrush battery of test, and PractRand up to 2^40 bytes.
 
