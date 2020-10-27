@@ -37,6 +37,13 @@ A fast version is provided, with autofeedback of all but the first 64-bit word, 
 
 In order to go crypto more rounds are needed, and to define a more complex state. That of Salsa20 can be used, and the number of rounds discussed, taking into account that this arx mixer passes tests with 3 rounds and is 64-bit oriented, while others aren't.
 
+Files are at https://github.com/danielnager/arxseq64. 
+An implementation can be found at:
+[1]: <https://github.com/danielnager/arxseq64/blob/main/arxseq64_512_out.c> arxseq64\_512_out.c
+And a benchmarking at:
+[1]: <https://github.com/danielnager/arxseq64/blob/main/arxseq64_512_bm.c> arxseq64\_512_bm.c
+
+
 Daniel Nager
 daniel.nager@gmail.com
 
